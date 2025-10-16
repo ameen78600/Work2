@@ -1,0 +1,25 @@
+{
+  "name": "dha-digital-services",
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm run build:api && npm run build:client",
+    "build:api": "tsc --project tsconfig.production.json --noEmitOnError false || true",
+    "build:client": "cd client && npm install --legacy-peer-deps && vite build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-cron": "^3.0.2",
+    "typescript": "^5.0.0",
+    "@types/node": "^18.0.0",
+    "vite": "^5.4.20"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
